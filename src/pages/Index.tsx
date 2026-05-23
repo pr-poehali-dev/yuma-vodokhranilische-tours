@@ -9,21 +9,23 @@ const routes = [
     icon: "Anchor",
     title: "Обзорная прогулка",
     duration: "1 час",
-    description: "Классический маршрут вдоль живописных берегов водохранилища. Проплывём мимо скал, лесных мысов и смотровых точек. Идеально для первого знакомства с Юмагузинским водохранилищем.",
+    description: "Классический маршрут вдоль живописных берегов водохранилища. Проплывём мимо скал и лесных мысов, сделаем остановку у водопада Климентий — одного из живописнейших мест Юмагузинского.",
     distance: "~12 км",
-    capacity: "до 8 человек",
+    capacity: "до 6 человек",
     color: "bg-water-light",
     accent: "text-water",
+    highlights: ["Водопад Климентий"],
   },
   {
     icon: "Mountain",
     title: "Горный маршрут",
-    duration: "2,5 часа",
-    description: "Углублённый маршрут к живописным скальным выходам и ущельям. Проходим мимо урочища Кутук, останавливаемся у водопадов и каменных гротов. Незабываемые виды Уральских гор.",
-    distance: "~25 км",
-    capacity: "до 8 человек",
+    duration: "2 часа",
+    description: "Маршрут к скальным выходам Южного Урала с посещением водопада Акаваз. Захватывающие виды гор, чистый горный воздух и звук падающей воды — незабываемые впечатления.",
+    distance: "~20 км",
+    capacity: "до 6 человек",
     color: "bg-terra-light",
     accent: "text-terra",
+    highlights: ["Водопад Акаваз"],
   },
   {
     icon: "Sunset",
@@ -34,25 +36,39 @@ const routes = [
     capacity: "до 6 человек",
     color: "bg-sand-light",
     accent: "text-[hsl(38,55%,38%)]",
+    highlights: [],
   },
   {
-    icon: "Fish",
-    title: "Рыбалка и прогулка",
-    duration: "4 часа",
-    description: "Совмещаем прогулку с рыбалкой на лучших местах. Капитан знает все уловистые точки. Снасти и наживка в аренду. Улов можно приготовить на берегу на мангале.",
-    distance: "~20 км",
-    capacity: "до 5 человек",
+    icon: "Trees",
+    title: "Урочище Кутук",
+    duration: "3 часа",
+    description: "Маршрут к легендарному урочищу Кутук — одному из самых загадочных мест Башкортостана. Карстовые воронки, пещеры, вековые леса и первозданная природа Южного Урала.",
+    distance: "~30 км",
+    capacity: "до 6 человек",
     color: "bg-[hsl(150,25%,90%)]",
     accent: "text-forest",
+    highlights: ["Урочище Кутук", "Карстовые пещеры"],
+  },
+  {
+    icon: "Landmark",
+    title: "Большая экспедиция",
+    duration: "4 часа",
+    description: "Полное погружение в природу Юмагузинского: посетим Скалу Вождей, Театральную пещеру и знаменитый Чёртов Палец. Три легендарные точки — одна незабываемая прогулка.",
+    distance: "~40 км",
+    capacity: "до 6 человек",
+    color: "bg-[hsl(270,20%,93%)]",
+    accent: "text-[hsl(270,30%,40%)]",
+    highlights: ["Скала Вождей", "Театральная пещера", "Чёртов Палец"],
   },
 ];
 
 const prices = [
-  { name: "Обзорная прогулка", duration: "1 час", weekday: "3 500 ₽", weekend: "4 000 ₽", group: "до 8 чел.", note: "" },
-  { name: "Горный маршрут", duration: "2,5 часа", weekday: "7 000 ₽", weekend: "8 000 ₽", group: "до 8 чел.", note: "" },
+  { name: "Обзорная прогулка", duration: "1 час", weekday: "3 500 ₽", weekend: "4 000 ₽", group: "до 6 чел.", note: "Водопад Климентий" },
+  { name: "Горный маршрут", duration: "2 часа", weekday: "6 000 ₽", weekend: "7 000 ₽", group: "до 6 чел.", note: "Водопад Акаваз" },
   { name: "Закатная прогулка", duration: "1,5 часа", weekday: "5 000 ₽", weekend: "5 500 ₽", group: "до 6 чел.", note: "" },
-  { name: "Рыбалка и прогулка", duration: "4 часа", weekday: "10 000 ₽", weekend: "12 000 ₽", group: "до 5 чел.", note: "Снасти: +500 ₽" },
-  { name: "Аренда катера", duration: "1 час", weekday: "2 500 ₽", weekend: "3 000 ₽", group: "до 8 чел.", note: "Без капитана" },
+  { name: "Урочище Кутук", duration: "3 часа", weekday: "9 000 ₽", weekend: "10 500 ₽", group: "до 6 чел.", note: "Пещеры, карст" },
+  { name: "Большая экспедиция", duration: "4 часа", weekday: "12 000 ₽", weekend: "14 000 ₽", group: "до 6 чел.", note: "3 легендарных места" },
+  { name: "Аренда катера", duration: "1 час", weekday: "2 500 ₽", weekend: "3 000 ₽", group: "до 6 чел.", note: "Без капитана" },
 ];
 
 const gallery = [
@@ -65,7 +81,7 @@ const features = [
   { icon: "Shield", text: "Безопасность", desc: "Спасательные жилеты и инструктаж" },
   { icon: "MapPin", text: "Знание мест", desc: "Капитан с 10-летним опытом" },
   { icon: "Clock", text: "Гибкое время", desc: "Отправление по договорённости" },
-  { icon: "Users", text: "Любые компании", desc: "От пары до группы 8 человек" },
+  { icon: "Users", text: "Любые компании", desc: "От пары до группы 6 человек" },
 ];
 
 export default function Index() {
@@ -169,8 +185,8 @@ export default function Index() {
                 <p className="font-body text-sm text-muted-foreground">довольных гостей</p>
               </div>
               <div>
-                <p className="font-display text-4xl font-bold text-terra">4</p>
-                <p className="font-body text-sm text-muted-foreground">маршрута</p>
+                <p className="font-display text-4xl font-bold text-terra">5</p>
+                <p className="font-body text-sm text-muted-foreground">маршрутов</p>
               </div>
             </div>
           </div>
@@ -204,10 +220,10 @@ export default function Index() {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {routes.map((route) => (
+            {routes.map((route, i) => (
               <div
                 key={route.title}
-                className={`${route.color} rounded-2xl p-7 hover-lift cursor-pointer border border-border`}
+                className={`${route.color} rounded-2xl p-7 hover-lift cursor-pointer border border-border ${i === 4 ? 'md:col-span-2' : ''}`}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-11 h-11 rounded-xl bg-white/60 flex items-center justify-center">
@@ -220,9 +236,18 @@ export default function Index() {
                 <h3 className="font-display text-2xl font-semibold text-foreground mb-3">
                   {route.title}
                 </h3>
-                <p className="font-body text-muted-foreground leading-relaxed mb-5 text-sm">
+                <p className="font-body text-muted-foreground leading-relaxed mb-4 text-sm">
                   {route.description}
                 </p>
+                {route.highlights.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {route.highlights.map((h) => (
+                      <span key={h} className="inline-flex items-center gap-1 bg-white/70 text-foreground text-xs font-body font-medium px-2.5 py-1 rounded-full border border-white/40">
+                        📍 {h}
+                      </span>
+                    ))}
+                  </div>
+                )}
                 <div className="flex gap-5">
                   <div className="flex items-center gap-1.5 text-xs font-body text-muted-foreground">
                     <Icon name="Route" size={14} fallback="MapPin" />
