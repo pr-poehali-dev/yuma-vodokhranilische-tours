@@ -40,35 +40,34 @@ const routes = [
   },
   {
     icon: "Trees",
-    title: "Урочище Кутук",
+    title: "Средняя экскурсия",
     duration: "3 часа",
-    description: "Маршрут к легендарному урочищу Кутук — одному из самых загадочных мест Башкортостана. Карстовые воронки, пещеры, вековые леса и первозданная природа Южного Урала.",
+    description: "Расширенный маршрут для тех, кто хочет увидеть больше. Водопад Климентий, пещера Азанташ, гора Семь Братьев, водопад Акаваз и таинственный остров Сказка — пять жемчужин Юмагузинского в одной прогулке.",
     distance: "~30 км",
     capacity: "до 6 человек",
     color: "bg-[hsl(150,25%,90%)]",
     accent: "text-forest",
-    highlights: ["Урочище Кутук", "Карстовые пещеры"],
+    highlights: ["Водопад Климентий", "Пещера Азанташ", "Гора Семь Братьев", "Водопад Акаваз", "Остров Сказка"],
   },
   {
     icon: "Landmark",
     title: "Большая экспедиция",
     duration: "4 часа",
-    description: "Полное погружение в природу Юмагузинского: посетим Скалу Вождей, Театральную пещеру и знаменитый Чёртов Палец. Три легендарные точки — одна незабываемая прогулка.",
-    distance: "~40 км",
+    description: "Полное погружение в природу Юмагузинского — самый насыщенный маршрут. Десять легендарных мест: от водопадов и пещер до скал с захватывающими видами на уральские просторы.",
+    distance: "~50 км",
     capacity: "до 6 человек",
     color: "bg-[hsl(270,20%,93%)]",
     accent: "text-[hsl(270,30%,40%)]",
-    highlights: ["Скала Вождей", "Театральная пещера", "Чёртов Палец"],
+    highlights: ["Водопад Климентий", "Пещера Азанташ", "Гора Семь Братьев", "Водопад Акаваз", "Остров Сказка", "Гора Крейсер", "Пещера Театральная", "Чёртов Палец", "Скала Вождей", "Пещера Акбута"],
   },
 ];
 
 const prices = [
-  { name: "Обзорная прогулка", duration: "1 час", weekday: "3 500 ₽", weekend: "4 000 ₽", group: "до 6 чел.", note: "Водопад Климентий" },
-  { name: "Горный маршрут", duration: "2 часа", weekday: "6 000 ₽", weekend: "7 000 ₽", group: "до 6 чел.", note: "Водопад Акаваз" },
-  { name: "Закатная прогулка", duration: "1,5 часа", weekday: "5 000 ₽", weekend: "5 500 ₽", group: "до 6 чел.", note: "" },
-  { name: "Урочище Кутук", duration: "3 часа", weekday: "9 000 ₽", weekend: "10 500 ₽", group: "до 6 чел.", note: "Пещеры, карст" },
-  { name: "Большая экспедиция", duration: "4 часа", weekday: "12 000 ₽", weekend: "14 000 ₽", group: "до 6 чел.", note: "3 легендарных места" },
-  { name: "Аренда катера", duration: "1 час", weekday: "2 500 ₽", weekend: "3 000 ₽", group: "до 6 чел.", note: "Без капитана" },
+  { name: "Обзорная прогулка", duration: "1 час", price: "7 000 ₽", group: "до 6 чел.", note: "Водопад Климентий" },
+  { name: "Горный маршрут", duration: "2 часа", price: "14 000 ₽", group: "до 6 чел.", note: "4 природных объекта" },
+  { name: "Закатная прогулка", duration: "1,5 часа", price: "10 500 ₽", group: "до 6 чел.", note: "" },
+  { name: "Средняя экскурсия", duration: "3 часа", price: "21 000 ₽", group: "до 6 чел.", note: "5 объектов" },
+  { name: "Большая экспедиция", duration: "4 часа", price: "28 000 ₽", group: "до 6 чел.", note: "10 легендарных мест" },
 ];
 
 const gallery = [
@@ -276,27 +275,23 @@ export default function Index() {
           </div>
 
           <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
-            <div className="grid grid-cols-5 gap-0 bg-terra text-white text-sm font-body font-semibold">
+            <div className="grid grid-cols-4 gap-0 bg-terra text-white text-sm font-body font-semibold">
               <div className="col-span-2 px-5 py-4">Маршрут</div>
-              <div className="px-3 py-4 text-center">Пн–Пт</div>
-              <div className="px-3 py-4 text-center">Сб–Вс</div>
+              <div className="px-3 py-4 text-center">Стоимость</div>
               <div className="px-3 py-4 text-center hidden sm:block">Группа</div>
             </div>
 
             {prices.map((row, i) => (
               <div
                 key={row.name}
-                className={`grid grid-cols-5 gap-0 border-b border-border last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-[hsl(38,35%,96%)]'}`}
+                className={`grid grid-cols-4 gap-0 border-b border-border last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-[hsl(38,35%,96%)]'}`}
               >
                 <div className="col-span-2 px-5 py-4">
                   <p className="font-body font-medium text-foreground text-sm">{row.name}</p>
                   <p className="font-body text-xs text-muted-foreground">{row.duration}{row.note ? ` · ${row.note}` : ''}</p>
                 </div>
                 <div className="px-3 py-4 text-center">
-                  <p className="font-body font-semibold text-foreground text-sm">{row.weekday}</p>
-                </div>
-                <div className="px-3 py-4 text-center">
-                  <p className="font-display font-semibold text-terra text-base">{row.weekend}</p>
+                  <p className="font-display font-semibold text-terra text-base">{row.price}</p>
                 </div>
                 <div className="px-3 py-4 text-center hidden sm:block">
                   <p className="font-body text-xs text-muted-foreground">{row.group}</p>
@@ -309,10 +304,6 @@ export default function Index() {
             <span className="flex items-center gap-1.5">
               <Icon name="Info" size={14} fallback="AlertCircle" />
               Предоплата 50% при бронировании
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Icon name="Baby" size={14} fallback="User" />
-              Дети до 5 лет — бесплатно
             </span>
             <span className="flex items-center gap-1.5">
               <Icon name="Phone" size={14} fallback="MessageCircle" />
@@ -419,7 +410,7 @@ export default function Index() {
                   <p className="font-body text-xs text-muted-foreground mb-1.5">Мессенджеры</p>
                   <div className="flex gap-2 flex-wrap">
                     <a
-                      href="https://wa.me/79279696036"
+                      href="https://wa.me/message/S4JS6B2SKW6OM1"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-[#25D366] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
@@ -427,7 +418,7 @@ export default function Index() {
                       <span>📱</span> WhatsApp
                     </a>
                     <a
-                      href="https://t.me/+79279696036"
+                      href="https://t.me/m/jeXId7U8ZDRi"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-[#2AABEE] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
@@ -435,7 +426,7 @@ export default function Index() {
                       <span>✈️</span> Telegram
                     </a>
                     <a
-                      href="https://vk.com/id"
+                      href="https://vk.com/yumagyzinokater"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 bg-[#4C75A3] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
@@ -501,7 +492,7 @@ export default function Index() {
                   📞 Позвонить · +7 (927) 969-60-36
                 </a>
                 <a
-                  href="https://wa.me/79279696036"
+                  href="https://wa.me/message/S4JS6B2SKW6OM1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-white/15 text-white border border-white/30 font-body font-medium py-4 rounded-xl hover:bg-white/25 transition-colors text-center"
@@ -509,7 +500,7 @@ export default function Index() {
                   📱 Написать в WhatsApp
                 </a>
                 <a
-                  href="https://t.me/+79279696036"
+                  href="https://t.me/m/jeXId7U8ZDRi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-white/15 text-white border border-white/30 font-body font-medium py-4 rounded-xl hover:bg-white/25 transition-colors text-center"
