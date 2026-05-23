@@ -381,18 +381,43 @@ export default function Index() {
                   <Icon name="Phone" size={18} className="text-terra" fallback="PhoneCall" />
                 </div>
                 <div>
-                  <p className="font-body text-xs text-muted-foreground mb-0.5">Телефон / WhatsApp</p>
-                  <p className="font-body font-semibold text-foreground">+7 (XXX) XXX-XX-XX</p>
+                  <p className="font-body text-xs text-muted-foreground mb-0.5">Телефон</p>
+                  <a href="tel:+79279696036" className="font-body font-semibold text-foreground hover:text-terra transition-colors">+7 (927) 969-60-36</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-terra-light rounded-xl flex items-center justify-center shrink-0">
-                  <Icon name="MessageCircle" size={18} className="text-terra" fallback="Mail" />
+                  <span className="text-lg">💬</span>
                 </div>
                 <div>
-                  <p className="font-body text-xs text-muted-foreground mb-0.5">ВКонтакте / Telegram</p>
-                  <p className="font-body font-semibold text-foreground">@yumaguzin_boat</p>
+                  <p className="font-body text-xs text-muted-foreground mb-1.5">Мессенджеры</p>
+                  <div className="flex gap-2 flex-wrap">
+                    <a
+                      href="https://wa.me/79279696036"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 bg-[#25D366] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
+                    >
+                      <span>📱</span> WhatsApp
+                    </a>
+                    <a
+                      href="https://t.me/+79279696036"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 bg-[#2AABEE] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
+                    >
+                      <span>✈️</span> Telegram
+                    </a>
+                    <a
+                      href="https://vk.com/id"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 bg-[#4C75A3] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
+                    >
+                      <span>🔵</span> ВКонтакте
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -419,8 +444,8 @@ export default function Index() {
               </div>
 
               <div className="pt-2 border-t border-border">
-                <p className="font-body text-xs text-muted-foreground mb-1">ИП Иванов И.И.</p>
-                <p className="font-body text-xs text-muted-foreground">ИНН: XXXXXXXXXXXX</p>
+                <p className="font-body text-xs text-muted-foreground mb-1">Капитан: Макс</p>
+                <p className="font-body text-xs text-muted-foreground">Реквизиты ИП — уточняйте при бронировании</p>
               </div>
             </div>
 
@@ -444,12 +469,28 @@ export default function Index() {
                 </ul>
               </div>
               <div className="flex flex-col gap-3">
-                <button className="w-full bg-white text-terra font-body font-semibold py-4 rounded-xl hover:bg-white/90 transition-colors">
-                  📞 Позвонить
-                </button>
-                <button className="w-full bg-white/15 text-white border border-white/30 font-body font-medium py-4 rounded-xl hover:bg-white/25 transition-colors">
-                  ✉️ Написать в Telegram
-                </button>
+                <a
+                  href="tel:+79279696036"
+                  className="w-full bg-white text-terra font-body font-semibold py-4 rounded-xl hover:bg-white/90 transition-colors text-center"
+                >
+                  📞 Позвонить · +7 (927) 969-60-36
+                </a>
+                <a
+                  href="https://wa.me/79279696036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-white/15 text-white border border-white/30 font-body font-medium py-4 rounded-xl hover:bg-white/25 transition-colors text-center"
+                >
+                  📱 Написать в WhatsApp
+                </a>
+                <a
+                  href="https://t.me/+79279696036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-white/15 text-white border border-white/30 font-body font-medium py-4 rounded-xl hover:bg-white/25 transition-colors text-center"
+                >
+                  ✈️ Написать в Telegram
+                </a>
               </div>
             </div>
           </div>
