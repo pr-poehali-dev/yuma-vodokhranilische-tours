@@ -20,7 +20,7 @@ const routes = [
     icon: "Mountain",
     title: "Горный маршрут",
     duration: "2 часа",
-    description: "Насыщенный маршрут по самым живописным местам Юмагузинского. Водопад Климентий, таинственная пещера Азанташ, величественная гора Семь Братьев и водопад Акаваз — четыре жемчужины в одной прогулке.",
+    description: "Насыщенный маршрут по самым живописным местам Юмагузинского водохранилища. Водопад Климентий, таинственная пещера Азанташ, величественная гора Семь Братьев и водопад Акаваз — четыре жемчужины в одной прогулке.",
     distance: "~20 км",
     capacity: "до 6 человек",
     color: "bg-terra-light",
@@ -53,7 +53,7 @@ const routes = [
     icon: "Landmark",
     title: "Большая экспедиция",
     duration: "4 часа",
-    description: "Полное погружение в природу Юмагузинского — самый насыщенный маршрут. Десять легендарных мест: от водопадов и пещер до скал с захватывающими видами на уральские просторы.",
+    description: "Полное погружение в природу Юмагузинского водохранилища — самый насыщенный маршрут. Десять легендарных мест: от водопадов и пещер до скал с захватывающими видами на уральские просторы.",
     distance: "~50 км",
     capacity: "до 6 человек",
     color: "bg-[hsl(270,20%,93%)]",
@@ -74,6 +74,11 @@ const gallery = [
   { src: HERO_IMG, alt: "Вид с высоты на Юмагузинское водохранилище", wide: true },
   { src: BOAT_IMG, alt: "Катер на водохранилище", wide: false },
   { src: FAMILY_IMG, alt: "Семья на прогулке", wide: false },
+  { src: "https://cdn.poehali.dev/projects/4a4e2e2e-613e-4daf-996c-f637d18b1837/bucket/b21265c3-37d1-445e-b128-850d33b6b7df.JPEG", alt: "Катер Silver Hawk на водохранилище", wide: false },
+  { src: "https://cdn.poehali.dev/projects/4a4e2e2e-613e-4daf-996c-f637d18b1837/bucket/2d62cde1-e14c-4103-a3e0-5f9ee249c5e5.JPEG", alt: "Катер мчится по воде", wide: true },
+  { src: "https://cdn.poehali.dev/projects/4a4e2e2e-613e-4daf-996c-f637d18b1837/bucket/55abd801-d964-4434-b439-14208cbfd644.JPEG", alt: "Скала Вождей — природный памятник", wide: false },
+  { src: "https://cdn.poehali.dev/projects/4a4e2e2e-613e-4daf-996c-f637d18b1837/bucket/ab34016c-6c61-4afa-9f7b-393d7fb379f4.JPG", alt: "Вид на плотину Юмагузинского водохранилища", wide: false },
+  { src: "https://cdn.poehali.dev/projects/4a4e2e2e-613e-4daf-996c-f637d18b1837/bucket/20cac24c-424e-4e32-8b37-838fbc06e6b8.JPG", alt: "Панорама Юмагузинского водохранилища", wide: true },
 ];
 
 const features = [
@@ -460,7 +465,7 @@ export default function Index() {
               </div>
 
               <div className="pt-2 border-t border-border">
-                <p className="font-body text-xs text-muted-foreground mb-1">Капитан: Макс</p>
+                <p className="font-body text-xs text-muted-foreground mb-1">Капитан: Олег Степанов</p>
                 <p className="font-body text-xs text-muted-foreground">Реквизиты ИП — уточняйте при бронировании</p>
               </div>
             </div>
