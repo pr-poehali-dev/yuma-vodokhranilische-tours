@@ -96,11 +96,7 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
         <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img
-              src="https://cdn.poehali.dev/projects/4a4e2e2e-613e-4daf-996c-f637d18b1837/bucket/f9c735d2-df27-41a4-844e-768326bade42.jpeg"
-              alt="Катер"
-              className="h-10 w-auto object-contain"
-            />
+            <span className="text-xl">⚓</span>
             <span className="font-display text-xl font-semibold text-terra">Юмагузинский катер</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm font-body text-muted-foreground">
