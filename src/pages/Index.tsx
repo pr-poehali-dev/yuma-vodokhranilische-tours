@@ -530,6 +530,21 @@ export default function Index() {
         </div>
       </section>
 
+      {/* REVIEWS WIDGET */}
+      <section className="py-12 px-5 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-display text-3xl font-semibold text-foreground text-center mb-8">Отзывы</h2>
+          <div id="widget-reviews"></div>
+          <script
+            defer
+            data-reviews-widget="otzyvypro"
+            data-widget-id="1da1c404-3be8-40bd-96b1-00fb9df8667a"
+            data-container-id="widget-reviews"
+            src="https://cdn.mediacdn.space/reviews_widget/widget-loader.js"
+          ></script>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-foreground text-white/70 py-8 px-5">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
