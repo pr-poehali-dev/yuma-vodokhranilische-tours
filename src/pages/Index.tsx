@@ -125,9 +125,6 @@ export default function Index() {
           <p className="animate-fade-in text-white/80 font-body text-sm uppercase tracking-widest mb-4">
             Башкортостан · Юмагузинское водохранилище
           </p>
-          <p className="animate-fade-in font-body text-white/70 text-base mb-3">
-            Прогулки на катере по Юмагузинскому водохранилищу
-          </p>
           <h1 className="animate-fade-up font-display text-5xl md:text-7xl lg:text-8xl text-white font-semibold leading-tight mb-6">
             Прогулки<br/>
             <em className="italic font-normal" style={{ color: 'hsl(38,80%,75%)' }}>на катере</em>
