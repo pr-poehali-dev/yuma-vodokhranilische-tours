@@ -515,15 +515,21 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <div className="mt-8 rounded-2xl overflow-hidden border border-border shadow-sm">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=76085659578"
-              width="100%"
-              height="400"
-              frameBorder="0"
-              title="Место отправления"
-              className="block"
-            />
+          <div className="mt-8">
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="MapPin" size={18} className="text-terra" fallback="Navigation" />
+              <span className="font-display text-lg font-semibold text-foreground">Место отправления</span>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=76085659578"
+                width="100%"
+                height="400"
+                frameBorder="0"
+                title="Место отправления"
+                className="block"
+              />
+            </div>
           </div>
         </div>
       </section>
