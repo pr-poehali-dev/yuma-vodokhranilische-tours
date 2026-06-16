@@ -307,10 +307,6 @@ export default function Index() {
 
           <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm font-body text-muted-foreground">
             <span className="flex items-center gap-1.5">
-              <Icon name="Info" size={14} fallback="AlertCircle" />
-              Предоплата 50% при бронировании
-            </span>
-            <span className="flex items-center gap-1.5">
               <Icon name="Phone" size={14} fallback="MessageCircle" />
               Индивидуальный тур — по запросу
             </span>
