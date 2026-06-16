@@ -130,7 +130,7 @@ export default function Index() {
             <em className="italic font-normal" style={{ color: 'hsl(38,80%,75%)' }}>на катере</em>
           </h1>
           <p className="animate-fade-up-delay-1 font-body text-white/85 text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed">
-            Прогулки на катере по Юмагузинскому водохранилищу с Олегом Степановым. Живописные маршруты, чистый воздух и незабываемые виды уральских гор с воды.
+            Откройте красоту уральских гор с воды. Живописные маршруты, чистый воздух и незабываемые виды.
           </p>
           <div className="animate-fade-up-delay-2 flex flex-col sm:flex-row gap-3 justify-center">
             <a
