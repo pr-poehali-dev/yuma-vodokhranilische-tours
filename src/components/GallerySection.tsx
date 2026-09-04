@@ -46,14 +46,14 @@ export default function GallerySection() {
               Хотите увидеть больше?
             </p>
             <p className="font-body text-muted-foreground text-sm mb-5">
-              Смотрите видео с прогулок и отзывы гостей в нашем ВКонтакте
+              Свяжитесь с нами, чтобы узнать подробности о прогулках
             </p>
             <a
               href="#contacts"
               className="inline-flex items-center gap-2 bg-water text-white font-body font-medium px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
             >
-              <Icon name="ExternalLink" size={16} fallback="Link" />
-              Перейти во ВКонтакте
+              <Icon name="Phone" size={16} fallback="PhoneCall" />
+              Связаться с нами
             </a>
           </div>
         </div>
@@ -109,41 +109,6 @@ export default function GallerySection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-terra-light rounded-xl flex items-center justify-center shrink-0">
-                  <span className="text-lg">💬</span>
-                </div>
-                <div>
-                  <p className="font-body text-xs text-muted-foreground mb-1.5">Мессенджеры</p>
-                  <div className="flex gap-2 flex-wrap">
-                    <a
-                      href="https://wa.me/message/S4JS6B2SKW6OM1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-[#25D366] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
-                    >
-                      <span>📱</span> WhatsApp
-                    </a>
-                    <a
-                      href="https://t.me/m/jeXId7U8ZDRi"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-[#2AABEE] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
-                    >
-                      <span>✈️</span> Telegram
-                    </a>
-                    <a
-                      href="https://vk.com/yumagyzinokater"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-[#4C75A3] text-white text-xs font-body font-medium px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity"
-                    >
-                      <span>🔵</span> ВКонтакте
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-terra-light rounded-xl flex items-center justify-center shrink-0">
                   <Icon name="MapPin" size={18} className="text-terra" fallback="Navigation" />
                 </div>
                 <div>
@@ -174,7 +139,7 @@ export default function GallerySection() {
               <div>
                 <h3 className="font-display text-3xl font-semibold mb-4">Забронировать прогулку</h3>
                 <p className="font-body text-white/80 text-sm leading-relaxed mb-8">
-                  Напишите нам в мессенджер или позвоните — ответим в течение 15 минут. Согласуем маршрут, время и количество гостей.
+                  Позвоните нам — ответим в течение 15 минут. Согласуем маршрут, время и количество гостей.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
@@ -191,20 +156,10 @@ export default function GallerySection() {
               </div>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://wa.me/message/S4JS6B2SKW6OM1"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+79279696036"
                   className="w-full bg-white text-terra font-body font-semibold py-4 rounded-xl hover:opacity-90 transition-opacity text-center"
                 >
-                  📱 Написать в WhatsApp
-                </a>
-                <a
-                  href="https://t.me/m/jeXId7U8ZDRi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-white/15 text-white border border-white/30 font-body font-medium py-4 rounded-xl hover:bg-white/25 transition-colors text-center"
-                >
-                  ✈️ Написать в Telegram
+                  📞 Позвонить +7 (927) 969-60-36
                 </a>
               </div>
             </div>
